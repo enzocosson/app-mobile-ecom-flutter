@@ -1,0 +1,139 @@
+[
+  {
+    "id": 1,
+    "title": "iPhone 14 Pro",
+    "price": 999.99,
+    "thumbnail": "assets/images/iphone 14 pro.jpg",
+    "images": [
+      "assets/images/iphone 14 pro.jpg",
+      "assets/images/iphone 14 pro.jpg"
+    ],
+    "description": "Le dernier iPhone avec la puce A16 Bionic, un écran Super Retina XDR et un système de caméra pro.",
+    "category": "smartphones",
+    "rating": 4.7,
+    "stock": 50
+  },
+  {
+    "id": 2,
+    "title": "MacBook Pro M2",
+    "price": 1999.99,
+    "thumbnail": "assets/images/macbook-pro-m2.jpeg",
+    "images": [
+      "assets/images/macbook-pro-m2.jpeg",
+      "assets/images/macbook-pro-m2.jpeg"
+    ],
+    "description": "MacBook Pro avec la puce M2, jusqu'à 20 heures d'autonomie et un écran Liquid Retina XDR.",
+    "category": "laptops",
+    "rating": 4.9,
+    "stock": 30
+  },
+  {
+    "id": 3,
+    "title": "Samsung Galaxy S23",
+    "price": 849.99,
+    "thumbnail": "assets/images/s23.jpg",
+    "images": ["assets/images/s23.jpg", "assets/images/s23.jpg"],
+    "description": "Samsung Galaxy S23 avec Snapdragon 8 Gen 2 et un appareil photo de 50MP.",
+    "category": "smartphones",
+    "rating": 4.6,
+    "stock": 75
+  },
+  {
+    "id": 4,
+    "title": "Sony WH-1000XM5",
+    "price": 399.99,
+    "thumbnail": "assets/images/airpods pro 2.png",
+    "images": [
+      "assets/images/airpods pro 2.png",
+      "assets/images/airpods pro 2.png"
+    ],
+    "description": "Casque sans fil avec suppression active du bruit de pointe et audio haute résolution.",
+    "category": "audio",
+    "rating": 4.8,
+    "stock": 100
+  },
+  {
+    "id": 5,
+    "title": "iPad Air M1",
+    "price": 599.99,
+    "thumbnail": "assets/images/iphone 14 pro.jpg",
+    "images": [
+      "assets/images/iphone 14 pro.jpg",
+      "assets/images/iphone 14 pro.jpg"
+    ],
+    "description": "iPad Air avec la puce M1, un écran Liquid Retina de 10,9 pouces et compatibilité Apple Pencil.",
+    "category": "tablets",
+    "rating": 4.7,
+    "stock": 60
+  },
+  {
+    "id": 6,
+    "title": "Dell XPS 15",
+    "price": 1699.99,
+    "thumbnail": "assets/images/dell-xps-15.avif",
+    "images": [
+      "assets/images/dell-xps-15.avif",
+      "assets/images/dell-xps-15.avif"
+    ],
+    "description": "Ordinateur portable Dell XPS 15 avec processeur Intel Core i7, 16 Go de RAM et SSD de 512 Go.",
+    "category": "laptops",
+    "rating": 4.5,
+    "stock": 45
+  },
+  {
+    "id": 7,
+    "title": "AirPods Pro 2",
+    "price": 249.99,
+    "thumbnail": "assets/images/airpods pro 2.png",
+    "images": [
+      "assets/images/airpods pro 2.png",
+      "assets/images/airpods pro 2.png"
+    ],
+    "description": "AirPods Pro de 2e génération avec suppression adaptative du bruit et audio spatial.",
+    "category": "audio",
+    "rating": 4.8,
+    "stock": 120
+  },
+  {
+    "id": 8,
+    "title": "Apple Watch Series 8",
+    "price": 429.99,
+    "thumbnail": "assets/images/apple watch 8.webp",
+    "images": [
+      "assets/images/apple watch 8.webp",
+      "assets/images/apple watch 8.webp"
+    ],
+    "description": "Apple Watch Series 8 avec capteur de température, détection d'accident et résistance à l'eau.",
+    "category": "wearables",
+    "rating": 4.6,
+    "stock": 80
+  },
+  {
+    "id": 9,
+    "title": "Canon EOS R6",
+    "price": 2499.99,
+    "thumbnail": "assets/images/canon eos R6.webp",
+    "images": [
+      "assets/images/canon eos R6.webp",
+      "assets/images/canon eos R6.webp"
+    ],
+    "description": "Appareil photo hybride Canon EOS R6 avec capteur plein format 20MP et vidéo 4K.",
+    "category": "cameras",
+    "rating": 4.9,
+    "stock": 25
+  },
+  {
+    "id": 10,
+    "title": "Google Pixel 7 Pro",
+    "price": 899.99,
+    "thumbnail": "assets/images/google pixel 7 pro.jpg",
+    "images": [
+      "assets/images/google pixel 7 pro.jpg",
+      "assets/images/google pixel 7 pro.jpg"
+    ],
+    "description": "Google Pixel 7 Pro avec Google Tensor G2, appareil photo de 50MP et écran OLED 120Hz.",
+    "category": "smartphones",
+    "rating": 4.7,
+    "stock": 65
+  }
+]
