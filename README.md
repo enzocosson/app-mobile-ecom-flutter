@@ -8,7 +8,7 @@ Application e-commerce complète développée avec Flutter suivant les principes
 
 ## 🌐 Démo en Ligne
 
-- 🚀 **Production** : [https://your-project.vercel.app](https://your-project.vercel.app) *(à configurer)*
+- 🚀 **Production** : [https://your-project.vercel.app](https://your-project.vercel.app) _(à configurer)_
 - 🔍 **Preview** : Automatique sur chaque Pull Request
 
 ## 🎯 Fonctionnalités
@@ -212,6 +212,7 @@ Ce projet utilise **GitHub Actions** + **Vercel** pour le déploiement automatiq
 - ✅ **Multi-plateforme** : Build Android, iOS, Web
 
 **📖 Guides de déploiement :**
+
 - [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) - Guide complet de configuration
 - [DEPLOYMENT_QUICK.md](DEPLOYMENT_QUICK.md) - Référence rapide
 - [CI_CD_ARCHITECTURE.md](CI_CD_ARCHITECTURE.md) - Architecture détaillée
@@ -219,6 +220,7 @@ Ce projet utilise **GitHub Actions** + **Vercel** pour le déploiement automatiq
 **🔑 Configuration requise :**
 
 Secrets GitHub à configurer :
+
 ```bash
 VERCEL_TOKEN          # Token API Vercel
 VERCEL_ORG_ID         # ID Organisation/User
@@ -226,6 +228,7 @@ VERCEL_PROJECT_ID     # ID du projet
 ```
 
 **⚡ Script de pré-déploiement :**
+
 ```bash
 ./pre_deploy.sh  # Vérifie tout avant de pusher
 ```
