@@ -34,13 +34,12 @@ class MockGetProductsUseCase extends _i1.Mock
   }
 
   @override
-  _i3.Future<List<_i4.Product>> call() => (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [],
-        ),
-        returnValue: _i3.Future<List<_i4.Product>>.value(<_i4.Product>[]),
-      ) as _i3.Future<List<_i4.Product>>);
+  _i3.Future<List<_i4.Product>> call() =>
+      (super.noSuchMethod(
+            Invocation.method(#call, []),
+            returnValue: _i3.Future<List<_i4.Product>>.value(<_i4.Product>[]),
+          )
+          as _i3.Future<List<_i4.Product>>);
 }
 
 /// A class which mocks [SearchProductsUseCase].
@@ -53,11 +52,10 @@ class MockSearchProductsUseCase extends _i1.Mock
   }
 
   @override
-  _i3.Future<List<_i4.Product>> call(String? query) => (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [query],
-        ),
-        returnValue: _i3.Future<List<_i4.Product>>.value(<_i4.Product>[]),
-      ) as _i3.Future<List<_i4.Product>>);
+  _i3.Future<List<_i4.Product>> call(String? query) =>
+      (super.noSuchMethod(
+            Invocation.method(#call, [query]),
+            returnValue: _i3.Future<List<_i4.Product>>.value(<_i4.Product>[]),
+          )
+          as _i3.Future<List<_i4.Product>>);
 }

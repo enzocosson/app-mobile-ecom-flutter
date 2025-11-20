@@ -23,13 +23,8 @@ import 'package:mockito/mockito.dart' as _i1;
 // ignore_for_file: subtype_of_sealed_class
 
 class _FakeUserProfile_0 extends _i1.SmartFake implements _i2.UserProfile {
-  _FakeUserProfile_0(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeUserProfile_0(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 /// A class which mocks [AuthRepository].
@@ -41,10 +36,12 @@ class MockAuthRepository extends _i1.Mock implements _i3.AuthRepository {
   }
 
   @override
-  _i4.Stream<_i2.UserProfile?> get authStateChanges => (super.noSuchMethod(
-        Invocation.getter(#authStateChanges),
-        returnValue: _i4.Stream<_i2.UserProfile?>.empty(),
-      ) as _i4.Stream<_i2.UserProfile?>);
+  _i4.Stream<_i2.UserProfile?> get authStateChanges =>
+      (super.noSuchMethod(
+            Invocation.getter(#authStateChanges),
+            returnValue: _i4.Stream<_i2.UserProfile?>.empty(),
+          )
+          as _i4.Stream<_i2.UserProfile?>);
 
   @override
   _i4.Future<_i2.UserProfile> signUp({
@@ -53,28 +50,23 @@ class MockAuthRepository extends _i1.Mock implements _i3.AuthRepository {
     String? displayName,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #signUp,
-          [],
-          {
-            #email: email,
-            #password: password,
-            #displayName: displayName,
-          },
-        ),
-        returnValue: _i4.Future<_i2.UserProfile>.value(_FakeUserProfile_0(
-          this,
-          Invocation.method(
-            #signUp,
-            [],
-            {
+            Invocation.method(#signUp, [], {
               #email: email,
               #password: password,
               #displayName: displayName,
-            },
-          ),
-        )),
-      ) as _i4.Future<_i2.UserProfile>);
+            }),
+            returnValue: _i4.Future<_i2.UserProfile>.value(
+              _FakeUserProfile_0(
+                this,
+                Invocation.method(#signUp, [], {
+                  #email: email,
+                  #password: password,
+                  #displayName: displayName,
+                }),
+              ),
+            ),
+          )
+          as _i4.Future<_i2.UserProfile>);
 
   @override
   _i4.Future<_i2.UserProfile> signIn({
@@ -82,62 +74,49 @@ class MockAuthRepository extends _i1.Mock implements _i3.AuthRepository {
     required String? password,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #signIn,
-          [],
-          {
-            #email: email,
-            #password: password,
-          },
-        ),
-        returnValue: _i4.Future<_i2.UserProfile>.value(_FakeUserProfile_0(
-          this,
-          Invocation.method(
-            #signIn,
-            [],
-            {
+            Invocation.method(#signIn, [], {
               #email: email,
               #password: password,
-            },
-          ),
-        )),
-      ) as _i4.Future<_i2.UserProfile>);
+            }),
+            returnValue: _i4.Future<_i2.UserProfile>.value(
+              _FakeUserProfile_0(
+                this,
+                Invocation.method(#signIn, [], {
+                  #email: email,
+                  #password: password,
+                }),
+              ),
+            ),
+          )
+          as _i4.Future<_i2.UserProfile>);
 
   @override
-  _i4.Future<void> signOut() => (super.noSuchMethod(
-        Invocation.method(
-          #signOut,
-          [],
-        ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
-
-  @override
-  _i4.Future<void> resetPassword(String? email) => (super.noSuchMethod(
-        Invocation.method(
-          #resetPassword,
-          [email],
-        ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
-
-  @override
-  _i4.Future<void> updateProfile({
-    String? displayName,
-    String? photoUrl,
-  }) =>
+  _i4.Future<void> signOut() =>
       (super.noSuchMethod(
-        Invocation.method(
-          #updateProfile,
-          [],
-          {
-            #displayName: displayName,
-            #photoUrl: photoUrl,
-          },
-        ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
+            Invocation.method(#signOut, []),
+            returnValue: _i4.Future<void>.value(),
+            returnValueForMissingStub: _i4.Future<void>.value(),
+          )
+          as _i4.Future<void>);
+
+  @override
+  _i4.Future<void> resetPassword(String? email) =>
+      (super.noSuchMethod(
+            Invocation.method(#resetPassword, [email]),
+            returnValue: _i4.Future<void>.value(),
+            returnValueForMissingStub: _i4.Future<void>.value(),
+          )
+          as _i4.Future<void>);
+
+  @override
+  _i4.Future<void> updateProfile({String? displayName, String? photoUrl}) =>
+      (super.noSuchMethod(
+            Invocation.method(#updateProfile, [], {
+              #displayName: displayName,
+              #photoUrl: photoUrl,
+            }),
+            returnValue: _i4.Future<void>.value(),
+            returnValueForMissingStub: _i4.Future<void>.value(),
+          )
+          as _i4.Future<void>);
 }

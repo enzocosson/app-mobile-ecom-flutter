@@ -32,49 +32,42 @@ class MockCatalogRepository extends _i1.Mock implements _i2.CatalogRepository {
   }
 
   @override
-  _i3.Future<List<_i4.Product>> fetchProducts() => (super.noSuchMethod(
-        Invocation.method(
-          #fetchProducts,
-          [],
-        ),
-        returnValue: _i3.Future<List<_i4.Product>>.value(<_i4.Product>[]),
-      ) as _i3.Future<List<_i4.Product>>);
+  _i3.Future<List<_i4.Product>> fetchProducts() =>
+      (super.noSuchMethod(
+            Invocation.method(#fetchProducts, []),
+            returnValue: _i3.Future<List<_i4.Product>>.value(<_i4.Product>[]),
+          )
+          as _i3.Future<List<_i4.Product>>);
 
   @override
-  _i3.Future<_i4.Product?> fetchProduct(int? id) => (super.noSuchMethod(
-        Invocation.method(
-          #fetchProduct,
-          [id],
-        ),
-        returnValue: _i3.Future<_i4.Product?>.value(),
-      ) as _i3.Future<_i4.Product?>);
+  _i3.Future<_i4.Product?> fetchProduct(int? id) =>
+      (super.noSuchMethod(
+            Invocation.method(#fetchProduct, [id]),
+            returnValue: _i3.Future<_i4.Product?>.value(),
+          )
+          as _i3.Future<_i4.Product?>);
 
   @override
   _i3.Future<List<_i4.Product>> searchProducts(String? query) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #searchProducts,
-          [query],
-        ),
-        returnValue: _i3.Future<List<_i4.Product>>.value(<_i4.Product>[]),
-      ) as _i3.Future<List<_i4.Product>>);
+            Invocation.method(#searchProducts, [query]),
+            returnValue: _i3.Future<List<_i4.Product>>.value(<_i4.Product>[]),
+          )
+          as _i3.Future<List<_i4.Product>>);
 
   @override
   _i3.Future<List<_i4.Product>> filterProductsByCategory(String? category) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #filterProductsByCategory,
-          [category],
-        ),
-        returnValue: _i3.Future<List<_i4.Product>>.value(<_i4.Product>[]),
-      ) as _i3.Future<List<_i4.Product>>);
+            Invocation.method(#filterProductsByCategory, [category]),
+            returnValue: _i3.Future<List<_i4.Product>>.value(<_i4.Product>[]),
+          )
+          as _i3.Future<List<_i4.Product>>);
 
   @override
-  _i3.Future<List<String>> fetchCategories() => (super.noSuchMethod(
-        Invocation.method(
-          #fetchCategories,
-          [],
-        ),
-        returnValue: _i3.Future<List<String>>.value(<String>[]),
-      ) as _i3.Future<List<String>>);
+  _i3.Future<List<String>> fetchCategories() =>
+      (super.noSuchMethod(
+            Invocation.method(#fetchCategories, []),
+            returnValue: _i3.Future<List<String>>.value(<String>[]),
+          )
+          as _i3.Future<List<String>>);
 }
