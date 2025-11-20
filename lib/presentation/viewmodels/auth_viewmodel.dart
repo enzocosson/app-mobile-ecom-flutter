@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../domain/repositories/auth_repository.dart';
+import '../../data/repositories/auth_repository_impl.dart';
 
 part 'auth_viewmodel.freezed.dart';
 
@@ -59,6 +60,23 @@ class AuthViewModel extends StateNotifier<AuthState> {
     try {
       await _repository.resetPassword(email);
       state = const AuthState.success();
+    } catch (e) {
+      state = AuthState.error(e.toString());
+    }
+  }
+
+  /// Connexion avec Google Sign-In
+  Future<void> signInWithGoogle() async {
+    state = const AuthState.loading();
+
+    try {
+      // Cast le repository en AuthRepositoryImpl pour accéder à la méthode signInWithGoogle
+      if (_repository is AuthRepositoryImpl) {
+        await (_repository as AuthRepositoryImpl).signInWithGoogle();
+        state = const AuthState.success();
+      } else {
+        throw Exception('Google Sign-In non disponible');
+      }
     } catch (e) {
       state = AuthState.error(e.toString());
     }

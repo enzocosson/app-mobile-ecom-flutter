@@ -1,9 +1,15 @@
 # ShopFlutter - Application E-commerce Flutter
 
-[![Flutter CI/CD](https://github.com/YOUR_USERNAME/app_ecommerce/actions/workflows/flutter.yml/badge.svg)](https://github.com/YOUR_USERNAME/app_ecommerce/actions/workflows/flutter.yml)
-[![codecov](https://codecov.io/gh/YOUR_USERNAME/app_ecommerce/branch/main/graph/badge.svg)](https://codecov.io/gh/YOUR_USERNAME/app_ecommerce)
+[![Flutter CI/CD](https://github.com/enzocosson/app-mobile-ecom-flutter/actions/workflows/flutter.yml/badge.svg)](https://github.com/enzocosson/app-mobile-ecom-flutter/actions/workflows/flutter.yml)
+[![codecov](https://codecov.io/gh/enzocosson/app-mobile-ecom-flutter/branch/main/graph/badge.svg)](https://codecov.io/gh/enzocosson/app-mobile-ecom-flutter)
+[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://vercel.com)
 
-Application e-commerce complète développée avec Flutter suivant les principes de **Clean Architecture** et **MVVM**.
+Application e-commerce complète développée avec Flutter suivant les principes de **Clean Architecture** et **MVVM**. Déploiement automatique sur Vercel avec CI/CD GitHub Actions.
+
+## 🌐 Démo en Ligne
+
+- 🚀 **Production** : [https://your-project.vercel.app](https://your-project.vercel.app) *(à configurer)*
+- 🔍 **Preview** : Automatique sur chaque Pull Request
 
 ## 🎯 Fonctionnalités
 
@@ -193,6 +199,36 @@ Ou via GitHub Actions (automatique sur push `main`) :
 - **Android** : Intégration du partage avec `share_plus`
 - **Web** : Configuration PWA avec manifest et service worker
 - **Desktop** : Support Linux, macOS, Windows
+
+## 🚀 Déploiement
+
+### CI/CD Automatique
+
+Ce projet utilise **GitHub Actions** + **Vercel** pour le déploiement automatique :
+
+- ✅ **Preview Deployments** : Automatique sur chaque Pull Request
+- ✅ **Production Deployments** : Automatique sur push vers `main`
+- ✅ **Tests** : Exécutés avant chaque déploiement
+- ✅ **Multi-plateforme** : Build Android, iOS, Web
+
+**📖 Guides de déploiement :**
+- [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) - Guide complet de configuration
+- [DEPLOYMENT_QUICK.md](DEPLOYMENT_QUICK.md) - Référence rapide
+- [CI_CD_ARCHITECTURE.md](CI_CD_ARCHITECTURE.md) - Architecture détaillée
+
+**🔑 Configuration requise :**
+
+Secrets GitHub à configurer :
+```bash
+VERCEL_TOKEN          # Token API Vercel
+VERCEL_ORG_ID         # ID Organisation/User
+VERCEL_PROJECT_ID     # ID du projet
+```
+
+**⚡ Script de pré-déploiement :**
+```bash
+./pre_deploy.sh  # Vérifie tout avant de pusher
+```
 
 ## 🔒 Sécurité
 

@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'firebase_options.dart';
 import 'presentation/router.dart';
+import 'presentation/widgets/biometric_auth_wrapper.dart';
 import 'data/models/cart_item_model.dart';
 import 'data/models/order_model.dart';
 
@@ -29,20 +30,22 @@ class ShopFlutterApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final router = ref.watch(routerProvider);
 
-    return MaterialApp.router(
-      title: 'ShopFlutter',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            foregroundColor: Colors.white,
-            backgroundColor: Colors.blue,
+    return BiometricAuthWrapper(
+      child: MaterialApp.router(
+        title: 'ShopFlutter',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+          useMaterial3: true,
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+              foregroundColor: Colors.white,
+              backgroundColor: Colors.blue,
+            ),
           ),
         ),
+        routerConfig: router,
       ),
-      routerConfig: router,
     );
   }
 }

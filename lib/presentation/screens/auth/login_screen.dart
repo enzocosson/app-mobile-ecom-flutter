@@ -164,6 +164,45 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                           },
                     child: const Text('Mot de passe oublié ?'),
                   ),
+
+                  // Google Sign-In désactivé temporairement (nécessite configuration Web)
+                  /*
+                  // Divider
+                  const SizedBox(height: 24),
+                  const Row(
+                    children: [
+                      Expanded(child: Divider()),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 16),
+                        child: Text('OU'),
+                      ),
+                      Expanded(child: Divider()),
+                    ],
+                  ),
+                  const SizedBox(height: 24),
+
+                  // Google Sign-In Button
+                  OutlinedButton.icon(
+                    onPressed: isLoading
+                        ? null
+                        : () {
+                            ref
+                                .read(authViewModelProvider.notifier)
+                                .signInWithGoogle();
+                          },
+                    icon: Image.network(
+                      'https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg',
+                      height: 24,
+                      errorBuilder: (context, error, stackTrace) =>
+                          const Icon(Icons.login),
+                    ),
+                    label: const Text('Continuer avec Google'),
+                    style: OutlinedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      side: const BorderSide(color: Colors.grey),
+                    ),
+                  ),
+                  */
                 ],
               ),
             ),

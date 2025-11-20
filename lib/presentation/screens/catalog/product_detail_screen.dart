@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:share_plus/share_plus.dart';
 import '../../../core/providers.dart';
 import '../../widgets/product_image.dart';
 
@@ -27,13 +28,22 @@ class ProductDetailScreen extends ConsumerWidget {
         // Adaptation iOS : Utiliser CupertinoPageScaffold
         if (!kIsWeb && Platform.isIOS) {
           return CupertinoPageScaffold(
-            navigationBar: CupertinoNavigationBar(middle: Text(product.title)),
+            navigationBar: CupertinoNavigationBar(
+              middle: Text(product.title),
+              trailing: _buildShareButton(product),
+            ),
             child: _buildContent(context, ref, product),
           );
         }
 
         return Scaffold(
-          appBar: AppBar(title: Text(product.title)),
+          appBar: AppBar(
+            title: Text(product.title),
+            actions: [
+              // Bouton de partage (Android spécifiquement)
+              if (!kIsWeb && Platform.isAndroid) _buildShareButton(product),
+            ],
+          ),
           body: _buildContent(context, ref, product),
         );
       },
@@ -43,6 +53,26 @@ class ProductDetailScreen extends ConsumerWidget {
         appBar: AppBar(title: const Text('Erreur')),
         body: Center(child: Text('Erreur: $err')),
       ),
+    );
+  }
+
+  /// Bouton de partage pour Android/iOS
+  Widget _buildShareButton(product) {
+    return IconButton(
+      icon: const Icon(Icons.share),
+      onPressed: () async {
+        try {
+          await Share.share(
+            '${product.title}\n\n'
+            '${product.description}\n\n'
+            'Prix: ${product.price.toStringAsFixed(2)} €\n\n'
+            'Disponible sur ShopFlutter',
+            subject: product.title,
+          );
+        } catch (e) {
+          debugPrint('Erreur lors du partage: $e');
+        }
+      },
     );
   }
 

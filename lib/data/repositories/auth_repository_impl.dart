@@ -1,13 +1,20 @@
 import 'package:firebase_auth/firebase_auth.dart' as firebase;
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import '../../domain/entities/user_profile.dart';
 import '../../domain/repositories/auth_repository.dart';
 
 /// Implémentation du AuthRepository avec Firebase Auth
 class AuthRepositoryImpl implements AuthRepository {
   final firebase.FirebaseAuth _firebaseAuth;
+  final GoogleSignIn? _googleSignIn;
 
-  AuthRepositoryImpl({firebase.FirebaseAuth? firebaseAuth})
-    : _firebaseAuth = firebaseAuth ?? firebase.FirebaseAuth.instance;
+  AuthRepositoryImpl({
+    firebase.FirebaseAuth? firebaseAuth,
+    GoogleSignIn? googleSignIn,
+  }) : _firebaseAuth = firebaseAuth ?? firebase.FirebaseAuth.instance,
+       // Désactiver Google Sign-In sur Web pour éviter l'erreur de Client ID
+       _googleSignIn = kIsWeb ? null : (googleSignIn ?? GoogleSignIn());
 
   @override
   Stream<UserProfile?> get authStateChanges {
@@ -81,7 +88,58 @@ class AuthRepositoryImpl implements AuthRepository {
 
   @override
   Future<void> signOut() async {
-    await _firebaseAuth.signOut();
+    await Future.wait([
+      _firebaseAuth.signOut(),
+      if (_googleSignIn != null) _googleSignIn.signOut(),
+    ]);
+  }
+
+  /// Connexion avec Google Sign-In
+  Future<UserProfile> signInWithGoogle() async {
+    if (_googleSignIn == null) {
+      throw Exception('Google Sign-In non disponible sur cette plateforme');
+    }
+
+    try {
+      print('🔐 Tentative de connexion Google');
+
+      // Déclencher le flux d'authentification
+      final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
+
+      if (googleUser == null) {
+        throw Exception('Connexion Google annulée');
+      }
+
+      print('✅ Utilisateur Google sélectionné: ${googleUser.email}');
+
+      // Obtenir les détails d'authentification
+      final GoogleSignInAuthentication googleAuth =
+          await googleUser.authentication;
+
+      // Créer une nouvelle credential
+      final credential = firebase.GoogleAuthProvider.credential(
+        accessToken: googleAuth.accessToken,
+        idToken: googleAuth.idToken,
+      );
+
+      // Se connecter à Firebase avec la credential
+      final userCredential = await _firebaseAuth.signInWithCredential(
+        credential,
+      );
+
+      if (userCredential.user == null) {
+        throw Exception('Échec de la connexion Google');
+      }
+
+      print('✅ Connexion Firebase réussie');
+      return _userToProfile(userCredential.user!);
+    } on firebase.FirebaseAuthException catch (e) {
+      print('❌ Erreur Firebase Auth: ${e.code} - ${e.message}');
+      throw _handleAuthException(e);
+    } catch (e) {
+      print('❌ Erreur Google Sign-In: $e');
+      throw Exception('Erreur lors de la connexion Google: $e');
+    }
   }
 
   @override
