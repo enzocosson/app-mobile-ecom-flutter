@@ -59,6 +59,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         elevation: 0,
         scrolledUnderElevation: 2,
         backgroundColor: AppTheme.surfaceColor,
+        titleSpacing: 0,
         title: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
