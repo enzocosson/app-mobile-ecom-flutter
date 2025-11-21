@@ -1,4 +1,5 @@
-build/
+# Ne pas ignorer build/web car c'est notre output
+# build/
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
