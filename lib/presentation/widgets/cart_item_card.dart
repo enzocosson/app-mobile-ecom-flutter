@@ -106,7 +106,7 @@ class CartItemCard extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 16),
-                
+
                 // Informations produit
                 Expanded(
                   child: Column(
@@ -141,7 +141,7 @@ class CartItemCard extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 8),
-                      
+
                       // Prix unitaire
                       Text(
                         '${item.product.price.toStringAsFixed(2)} € / unité',
@@ -151,7 +151,7 @@ class CartItemCard extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 12),
-                      
+
                       // Contrôles quantité et sous-total
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -198,7 +198,8 @@ class CartItemCard extends StatelessWidget {
                                     color: Colors.white,
                                     border: Border.symmetric(
                                       vertical: BorderSide(
-                                        color: AppTheme.primaryColor.withOpacity(0.2),
+                                        color: AppTheme.primaryColor
+                                            .withOpacity(0.2),
                                       ),
                                     ),
                                   ),
@@ -231,7 +232,7 @@ class CartItemCard extends StatelessWidget {
                               ],
                             ),
                           ),
-                          
+
                           // Sous-total
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.end,

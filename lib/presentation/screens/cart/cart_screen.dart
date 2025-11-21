@@ -189,7 +189,7 @@ class CartScreen extends ConsumerWidget {
                       },
                     ),
                   ),
-                  
+
                   // Résumé et bouton commander
                   Container(
                     decoration: BoxDecoration(
@@ -257,9 +257,9 @@ class CartScreen extends ConsumerWidget {
                                         ),
                                       ),
                                       ShaderMask(
-                                        shaderCallback: (bounds) =>
-                                            AppTheme.primaryGradient
-                                                .createShader(bounds),
+                                        shaderCallback: (bounds) => AppTheme
+                                            .primaryGradient
+                                            .createShader(bounds),
                                         child: Text(
                                           '${total.toStringAsFixed(2)} €',
                                           style: const TextStyle(
@@ -275,7 +275,7 @@ class CartScreen extends ConsumerWidget {
                               ),
                             ),
                             const SizedBox(height: 16),
-                            
+
                             // Bouton commander
                             SizedBox(
                               width: double.infinity,
