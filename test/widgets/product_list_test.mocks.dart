@@ -24,8 +24,13 @@ import 'package:state_notifier/state_notifier.dart' as _i5;
 // ignore_for_file: subtype_of_sealed_class
 
 class _FakeCatalogState_0 extends _i1.SmartFake implements _i2.CatalogState {
-  _FakeCatalogState_0(Object parent, Invocation parentInvocation)
-    : super(parent, parentInvocation);
+  _FakeCatalogState_0(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
 }
 
 /// A class which mocks [CatalogViewModel].
@@ -38,87 +43,103 @@ class MockCatalogViewModel extends _i1.Mock implements _i2.CatalogViewModel {
 
   @override
   set onError(_i3.ErrorListener? _onError) => super.noSuchMethod(
-    Invocation.setter(#onError, _onError),
-    returnValueForMissingStub: null,
-  );
+        Invocation.setter(
+          #onError,
+          _onError,
+        ),
+        returnValueForMissingStub: null,
+      );
 
   @override
-  bool get mounted =>
-      (super.noSuchMethod(Invocation.getter(#mounted), returnValue: false)
-          as bool);
+  bool get mounted => (super.noSuchMethod(
+        Invocation.getter(#mounted),
+        returnValue: false,
+      ) as bool);
 
   @override
-  _i4.Stream<_i2.CatalogState> get stream =>
-      (super.noSuchMethod(
-            Invocation.getter(#stream),
-            returnValue: _i4.Stream<_i2.CatalogState>.empty(),
-          )
-          as _i4.Stream<_i2.CatalogState>);
+  _i4.Stream<_i2.CatalogState> get stream => (super.noSuchMethod(
+        Invocation.getter(#stream),
+        returnValue: _i4.Stream<_i2.CatalogState>.empty(),
+      ) as _i4.Stream<_i2.CatalogState>);
 
   @override
-  _i2.CatalogState get state =>
-      (super.noSuchMethod(
-            Invocation.getter(#state),
-            returnValue: _FakeCatalogState_0(this, Invocation.getter(#state)),
-          )
-          as _i2.CatalogState);
+  _i2.CatalogState get state => (super.noSuchMethod(
+        Invocation.getter(#state),
+        returnValue: _FakeCatalogState_0(
+          this,
+          Invocation.getter(#state),
+        ),
+      ) as _i2.CatalogState);
 
   @override
   set state(_i2.CatalogState? value) => super.noSuchMethod(
-    Invocation.setter(#state, value),
-    returnValueForMissingStub: null,
-  );
+        Invocation.setter(
+          #state,
+          value,
+        ),
+        returnValueForMissingStub: null,
+      );
 
   @override
-  _i2.CatalogState get debugState =>
+  _i2.CatalogState get debugState => (super.noSuchMethod(
+        Invocation.getter(#debugState),
+        returnValue: _FakeCatalogState_0(
+          this,
+          Invocation.getter(#debugState),
+        ),
+      ) as _i2.CatalogState);
+
+  @override
+  bool get hasListeners => (super.noSuchMethod(
+        Invocation.getter(#hasListeners),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  _i4.Future<void> loadProducts() => (super.noSuchMethod(
+        Invocation.method(
+          #loadProducts,
+          [],
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
+
+  @override
+  _i4.Future<void> searchProducts(String? query) => (super.noSuchMethod(
+        Invocation.method(
+          #searchProducts,
+          [query],
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
+
+  @override
+  _i4.Future<void> filterByCategory(String? category) => (super.noSuchMethod(
+        Invocation.method(
+          #filterByCategory,
+          [category],
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
+
+  @override
+  bool updateShouldNotify(
+    _i2.CatalogState? old,
+    _i2.CatalogState? current,
+  ) =>
       (super.noSuchMethod(
-            Invocation.getter(#debugState),
-            returnValue: _FakeCatalogState_0(
-              this,
-              Invocation.getter(#debugState),
-            ),
-          )
-          as _i2.CatalogState);
-
-  @override
-  bool get hasListeners =>
-      (super.noSuchMethod(Invocation.getter(#hasListeners), returnValue: false)
-          as bool);
-
-  @override
-  _i4.Future<void> loadProducts() =>
-      (super.noSuchMethod(
-            Invocation.method(#loadProducts, []),
-            returnValue: _i4.Future<void>.value(),
-            returnValueForMissingStub: _i4.Future<void>.value(),
-          )
-          as _i4.Future<void>);
-
-  @override
-  _i4.Future<void> searchProducts(String? query) =>
-      (super.noSuchMethod(
-            Invocation.method(#searchProducts, [query]),
-            returnValue: _i4.Future<void>.value(),
-            returnValueForMissingStub: _i4.Future<void>.value(),
-          )
-          as _i4.Future<void>);
-
-  @override
-  _i4.Future<void> filterByCategory(String? category) =>
-      (super.noSuchMethod(
-            Invocation.method(#filterByCategory, [category]),
-            returnValue: _i4.Future<void>.value(),
-            returnValueForMissingStub: _i4.Future<void>.value(),
-          )
-          as _i4.Future<void>);
-
-  @override
-  bool updateShouldNotify(_i2.CatalogState? old, _i2.CatalogState? current) =>
-      (super.noSuchMethod(
-            Invocation.method(#updateShouldNotify, [old, current]),
-            returnValue: false,
-          )
-          as bool);
+        Invocation.method(
+          #updateShouldNotify,
+          [
+            old,
+            current,
+          ],
+        ),
+        returnValue: false,
+      ) as bool);
 
   @override
   _i3.RemoveListener addListener(
@@ -126,18 +147,20 @@ class MockCatalogViewModel extends _i1.Mock implements _i2.CatalogViewModel {
     bool? fireImmediately = true,
   }) =>
       (super.noSuchMethod(
-            Invocation.method(
-              #addListener,
-              [listener],
-              {#fireImmediately: fireImmediately},
-            ),
-            returnValue: () {},
-          )
-          as _i3.RemoveListener);
+        Invocation.method(
+          #addListener,
+          [listener],
+          {#fireImmediately: fireImmediately},
+        ),
+        returnValue: () {},
+      ) as _i3.RemoveListener);
 
   @override
   void dispose() => super.noSuchMethod(
-    Invocation.method(#dispose, []),
-    returnValueForMissingStub: null,
-  );
+        Invocation.method(
+          #dispose,
+          [],
+        ),
+        returnValueForMissingStub: null,
+      );
 }

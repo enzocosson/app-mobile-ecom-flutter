@@ -23,8 +23,13 @@ import 'package:mockito/mockito.dart' as _i1;
 // ignore_for_file: subtype_of_sealed_class
 
 class _FakeOrder_0 extends _i1.SmartFake implements _i2.Order {
-  _FakeOrder_0(Object parent, Invocation parentInvocation)
-    : super(parent, parentInvocation);
+  _FakeOrder_0(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
 }
 
 /// A class which mocks [OrderRepository].
@@ -36,30 +41,38 @@ class MockOrderRepository extends _i1.Mock implements _i3.OrderRepository {
   }
 
   @override
-  _i4.Future<_i2.Order> createOrder(_i2.Order? order) =>
-      (super.noSuchMethod(
-            Invocation.method(#createOrder, [order]),
-            returnValue: _i4.Future<_i2.Order>.value(
-              _FakeOrder_0(this, Invocation.method(#createOrder, [order])),
-            ),
-          )
-          as _i4.Future<_i2.Order>);
+  _i4.Future<_i2.Order> createOrder(_i2.Order? order) => (super.noSuchMethod(
+        Invocation.method(
+          #createOrder,
+          [order],
+        ),
+        returnValue: _i4.Future<_i2.Order>.value(_FakeOrder_0(
+          this,
+          Invocation.method(
+            #createOrder,
+            [order],
+          ),
+        )),
+      ) as _i4.Future<_i2.Order>);
 
   @override
   _i4.Future<List<_i2.Order>> getUserOrders(String? userId) =>
       (super.noSuchMethod(
-            Invocation.method(#getUserOrders, [userId]),
-            returnValue: _i4.Future<List<_i2.Order>>.value(<_i2.Order>[]),
-          )
-          as _i4.Future<List<_i2.Order>>);
+        Invocation.method(
+          #getUserOrders,
+          [userId],
+        ),
+        returnValue: _i4.Future<List<_i2.Order>>.value(<_i2.Order>[]),
+      ) as _i4.Future<List<_i2.Order>>);
 
   @override
-  _i4.Future<_i2.Order?> getOrder(String? orderId) =>
-      (super.noSuchMethod(
-            Invocation.method(#getOrder, [orderId]),
-            returnValue: _i4.Future<_i2.Order?>.value(),
-          )
-          as _i4.Future<_i2.Order?>);
+  _i4.Future<_i2.Order?> getOrder(String? orderId) => (super.noSuchMethod(
+        Invocation.method(
+          #getOrder,
+          [orderId],
+        ),
+        returnValue: _i4.Future<_i2.Order?>.value(),
+      ) as _i4.Future<_i2.Order?>);
 
   @override
   _i4.Future<void> updateOrderStatus(
@@ -67,9 +80,14 @@ class MockOrderRepository extends _i1.Mock implements _i3.OrderRepository {
     _i2.OrderStatus? status,
   ) =>
       (super.noSuchMethod(
-            Invocation.method(#updateOrderStatus, [orderId, status]),
-            returnValue: _i4.Future<void>.value(),
-            returnValueForMissingStub: _i4.Future<void>.value(),
-          )
-          as _i4.Future<void>);
+        Invocation.method(
+          #updateOrderStatus,
+          [
+            orderId,
+            status,
+          ],
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
 }

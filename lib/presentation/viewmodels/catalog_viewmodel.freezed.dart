@@ -12,8 +12,7 @@ part of 'catalog_viewmodel.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$CatalogState {
@@ -22,47 +21,52 @@ mixin _$CatalogState {
     required TResult Function() loading,
     required TResult Function(List<Product> products) loaded,
     required TResult Function(String message) error,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function(List<Product> products)? loaded,
     TResult? Function(String message)? error,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function(List<Product> products)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(CatalogStateLoading value) loading,
     required TResult Function(CatalogStateLoaded value) loaded,
     required TResult Function(CatalogStateError value) error,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(CatalogStateLoading value)? loading,
     TResult? Function(CatalogStateLoaded value)? loaded,
     TResult? Function(CatalogStateError value)? error,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(CatalogStateLoading value)? loading,
     TResult Function(CatalogStateLoaded value)? loaded,
     TResult Function(CatalogStateError value)? error,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CatalogStateCopyWith<$Res> {
   factory $CatalogStateCopyWith(
-    CatalogState value,
-    $Res Function(CatalogState) then,
-  ) = _$CatalogStateCopyWithImpl<$Res, CatalogState>;
+          CatalogState value, $Res Function(CatalogState) then) =
+      _$CatalogStateCopyWithImpl<$Res, CatalogState>;
 }
 
 /// @nodoc
@@ -78,20 +82,18 @@ class _$CatalogStateCopyWithImpl<$Res, $Val extends CatalogState>
 
 /// @nodoc
 abstract class _$$CatalogStateLoadingImplCopyWith<$Res> {
-  factory _$$CatalogStateLoadingImplCopyWith(
-    _$CatalogStateLoadingImpl value,
-    $Res Function(_$CatalogStateLoadingImpl) then,
-  ) = __$$CatalogStateLoadingImplCopyWithImpl<$Res>;
+  factory _$$CatalogStateLoadingImplCopyWith(_$CatalogStateLoadingImpl value,
+          $Res Function(_$CatalogStateLoadingImpl) then) =
+      __$$CatalogStateLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
 class __$$CatalogStateLoadingImplCopyWithImpl<$Res>
     extends _$CatalogStateCopyWithImpl<$Res, _$CatalogStateLoadingImpl>
     implements _$$CatalogStateLoadingImplCopyWith<$Res> {
-  __$$CatalogStateLoadingImplCopyWithImpl(
-    _$CatalogStateLoadingImpl _value,
-    $Res Function(_$CatalogStateLoadingImpl) _then,
-  ) : super(_value, _then);
+  __$$CatalogStateLoadingImplCopyWithImpl(_$CatalogStateLoadingImpl _value,
+      $Res Function(_$CatalogStateLoadingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -189,10 +191,9 @@ abstract class CatalogStateLoading implements CatalogState {
 
 /// @nodoc
 abstract class _$$CatalogStateLoadedImplCopyWith<$Res> {
-  factory _$$CatalogStateLoadedImplCopyWith(
-    _$CatalogStateLoadedImpl value,
-    $Res Function(_$CatalogStateLoadedImpl) then,
-  ) = __$$CatalogStateLoadedImplCopyWithImpl<$Res>;
+  factory _$$CatalogStateLoadedImplCopyWith(_$CatalogStateLoadedImpl value,
+          $Res Function(_$CatalogStateLoadedImpl) then) =
+      __$$CatalogStateLoadedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<Product> products});
 }
@@ -201,22 +202,21 @@ abstract class _$$CatalogStateLoadedImplCopyWith<$Res> {
 class __$$CatalogStateLoadedImplCopyWithImpl<$Res>
     extends _$CatalogStateCopyWithImpl<$Res, _$CatalogStateLoadedImpl>
     implements _$$CatalogStateLoadedImplCopyWith<$Res> {
-  __$$CatalogStateLoadedImplCopyWithImpl(
-    _$CatalogStateLoadedImpl _value,
-    $Res Function(_$CatalogStateLoadedImpl) _then,
-  ) : super(_value, _then);
+  __$$CatalogStateLoadedImplCopyWithImpl(_$CatalogStateLoadedImpl _value,
+      $Res Function(_$CatalogStateLoadedImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? products = null}) {
-    return _then(
-      _$CatalogStateLoadedImpl(
-        null == products
-            ? _value._products
-            : products // ignore: cast_nullable_to_non_nullable
-                  as List<Product>,
-      ),
-    );
+  $Res call({
+    Object? products = null,
+  }) {
+    return _then(_$CatalogStateLoadedImpl(
+      null == products
+          ? _value._products
+          : products // ignore: cast_nullable_to_non_nullable
+              as List<Product>,
+    ));
   }
 }
 
@@ -224,7 +224,7 @@ class __$$CatalogStateLoadedImplCopyWithImpl<$Res>
 
 class _$CatalogStateLoadedImpl implements CatalogStateLoaded {
   const _$CatalogStateLoadedImpl(final List<Product> products)
-    : _products = products;
+      : _products = products;
 
   final List<Product> _products;
   @override
@@ -256,9 +256,7 @@ class _$CatalogStateLoadedImpl implements CatalogStateLoaded {
   @pragma('vm:prefer-inline')
   _$$CatalogStateLoadedImplCopyWith<_$CatalogStateLoadedImpl> get copyWith =>
       __$$CatalogStateLoadedImplCopyWithImpl<_$CatalogStateLoadedImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -341,10 +339,9 @@ abstract class CatalogStateLoaded implements CatalogState {
 
 /// @nodoc
 abstract class _$$CatalogStateErrorImplCopyWith<$Res> {
-  factory _$$CatalogStateErrorImplCopyWith(
-    _$CatalogStateErrorImpl value,
-    $Res Function(_$CatalogStateErrorImpl) then,
-  ) = __$$CatalogStateErrorImplCopyWithImpl<$Res>;
+  factory _$$CatalogStateErrorImplCopyWith(_$CatalogStateErrorImpl value,
+          $Res Function(_$CatalogStateErrorImpl) then) =
+      __$$CatalogStateErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
@@ -353,22 +350,21 @@ abstract class _$$CatalogStateErrorImplCopyWith<$Res> {
 class __$$CatalogStateErrorImplCopyWithImpl<$Res>
     extends _$CatalogStateCopyWithImpl<$Res, _$CatalogStateErrorImpl>
     implements _$$CatalogStateErrorImplCopyWith<$Res> {
-  __$$CatalogStateErrorImplCopyWithImpl(
-    _$CatalogStateErrorImpl _value,
-    $Res Function(_$CatalogStateErrorImpl) _then,
-  ) : super(_value, _then);
+  __$$CatalogStateErrorImplCopyWithImpl(_$CatalogStateErrorImpl _value,
+      $Res Function(_$CatalogStateErrorImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? message = null}) {
-    return _then(
-      _$CatalogStateErrorImpl(
-        null == message
-            ? _value.message
-            : message // ignore: cast_nullable_to_non_nullable
-                  as String,
-      ),
-    );
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$CatalogStateErrorImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
   }
 }
 
@@ -401,9 +397,7 @@ class _$CatalogStateErrorImpl implements CatalogStateError {
   @pragma('vm:prefer-inline')
   _$$CatalogStateErrorImplCopyWith<_$CatalogStateErrorImpl> get copyWith =>
       __$$CatalogStateErrorImplCopyWithImpl<_$CatalogStateErrorImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs

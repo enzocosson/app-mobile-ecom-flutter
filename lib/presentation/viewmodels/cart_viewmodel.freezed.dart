@@ -12,8 +12,7 @@ part of 'cart_viewmodel.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$CartState {
@@ -22,39 +21,45 @@ mixin _$CartState {
     required TResult Function() loading,
     required TResult Function(List<CartItem> items, double total) loaded,
     required TResult Function(String message) error,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
     TResult? Function(List<CartItem> items, double total)? loaded,
     TResult? Function(String message)? error,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
     TResult Function(List<CartItem> items, double total)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(CartStateLoading value) loading,
     required TResult Function(CartStateLoaded value) loaded,
     required TResult Function(CartStateError value) error,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(CartStateLoading value)? loading,
     TResult? Function(CartStateLoaded value)? loaded,
     TResult? Function(CartStateError value)? error,
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(CartStateLoading value)? loading,
     TResult Function(CartStateLoaded value)? loaded,
     TResult Function(CartStateError value)? error,
     required TResult orElse(),
-  }) => throw _privateConstructorUsedError;
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -76,20 +81,18 @@ class _$CartStateCopyWithImpl<$Res, $Val extends CartState>
 
 /// @nodoc
 abstract class _$$CartStateLoadingImplCopyWith<$Res> {
-  factory _$$CartStateLoadingImplCopyWith(
-    _$CartStateLoadingImpl value,
-    $Res Function(_$CartStateLoadingImpl) then,
-  ) = __$$CartStateLoadingImplCopyWithImpl<$Res>;
+  factory _$$CartStateLoadingImplCopyWith(_$CartStateLoadingImpl value,
+          $Res Function(_$CartStateLoadingImpl) then) =
+      __$$CartStateLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
 class __$$CartStateLoadingImplCopyWithImpl<$Res>
     extends _$CartStateCopyWithImpl<$Res, _$CartStateLoadingImpl>
     implements _$$CartStateLoadingImplCopyWith<$Res> {
-  __$$CartStateLoadingImplCopyWithImpl(
-    _$CartStateLoadingImpl _value,
-    $Res Function(_$CartStateLoadingImpl) _then,
-  ) : super(_value, _then);
+  __$$CartStateLoadingImplCopyWithImpl(_$CartStateLoadingImpl _value,
+      $Res Function(_$CartStateLoadingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -186,10 +189,9 @@ abstract class CartStateLoading implements CartState {
 
 /// @nodoc
 abstract class _$$CartStateLoadedImplCopyWith<$Res> {
-  factory _$$CartStateLoadedImplCopyWith(
-    _$CartStateLoadedImpl value,
-    $Res Function(_$CartStateLoadedImpl) then,
-  ) = __$$CartStateLoadedImplCopyWithImpl<$Res>;
+  factory _$$CartStateLoadedImplCopyWith(_$CartStateLoadedImpl value,
+          $Res Function(_$CartStateLoadedImpl) then) =
+      __$$CartStateLoadedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<CartItem> items, double total});
 }
@@ -199,25 +201,25 @@ class __$$CartStateLoadedImplCopyWithImpl<$Res>
     extends _$CartStateCopyWithImpl<$Res, _$CartStateLoadedImpl>
     implements _$$CartStateLoadedImplCopyWith<$Res> {
   __$$CartStateLoadedImplCopyWithImpl(
-    _$CartStateLoadedImpl _value,
-    $Res Function(_$CartStateLoadedImpl) _then,
-  ) : super(_value, _then);
+      _$CartStateLoadedImpl _value, $Res Function(_$CartStateLoadedImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? items = null, Object? total = null}) {
-    return _then(
-      _$CartStateLoadedImpl(
-        null == items
-            ? _value._items
-            : items // ignore: cast_nullable_to_non_nullable
-                  as List<CartItem>,
-        null == total
-            ? _value.total
-            : total // ignore: cast_nullable_to_non_nullable
-                  as double,
-      ),
-    );
+  $Res call({
+    Object? items = null,
+    Object? total = null,
+  }) {
+    return _then(_$CartStateLoadedImpl(
+      null == items
+          ? _value._items
+          : items // ignore: cast_nullable_to_non_nullable
+              as List<CartItem>,
+      null == total
+          ? _value.total
+          : total // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
   }
 }
 
@@ -225,7 +227,7 @@ class __$$CartStateLoadedImplCopyWithImpl<$Res>
 
 class _$CartStateLoadedImpl implements CartStateLoaded {
   const _$CartStateLoadedImpl(final List<CartItem> items, this.total)
-    : _items = items;
+      : _items = items;
 
   final List<CartItem> _items;
   @override
@@ -254,19 +256,14 @@ class _$CartStateLoadedImpl implements CartStateLoaded {
 
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    const DeepCollectionEquality().hash(_items),
-    total,
-  );
+      runtimeType, const DeepCollectionEquality().hash(_items), total);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CartStateLoadedImplCopyWith<_$CartStateLoadedImpl> get copyWith =>
       __$$CartStateLoadedImplCopyWithImpl<_$CartStateLoadedImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -339,9 +336,7 @@ class _$CartStateLoadedImpl implements CartStateLoaded {
 
 abstract class CartStateLoaded implements CartState {
   const factory CartStateLoaded(
-    final List<CartItem> items,
-    final double total,
-  ) = _$CartStateLoadedImpl;
+      final List<CartItem> items, final double total) = _$CartStateLoadedImpl;
 
   List<CartItem> get items;
   double get total;
@@ -352,10 +347,9 @@ abstract class CartStateLoaded implements CartState {
 
 /// @nodoc
 abstract class _$$CartStateErrorImplCopyWith<$Res> {
-  factory _$$CartStateErrorImplCopyWith(
-    _$CartStateErrorImpl value,
-    $Res Function(_$CartStateErrorImpl) then,
-  ) = __$$CartStateErrorImplCopyWithImpl<$Res>;
+  factory _$$CartStateErrorImplCopyWith(_$CartStateErrorImpl value,
+          $Res Function(_$CartStateErrorImpl) then) =
+      __$$CartStateErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
@@ -365,21 +359,20 @@ class __$$CartStateErrorImplCopyWithImpl<$Res>
     extends _$CartStateCopyWithImpl<$Res, _$CartStateErrorImpl>
     implements _$$CartStateErrorImplCopyWith<$Res> {
   __$$CartStateErrorImplCopyWithImpl(
-    _$CartStateErrorImpl _value,
-    $Res Function(_$CartStateErrorImpl) _then,
-  ) : super(_value, _then);
+      _$CartStateErrorImpl _value, $Res Function(_$CartStateErrorImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? message = null}) {
-    return _then(
-      _$CartStateErrorImpl(
-        null == message
-            ? _value.message
-            : message // ignore: cast_nullable_to_non_nullable
-                  as String,
-      ),
-    );
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$CartStateErrorImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
   }
 }
 
@@ -412,9 +405,7 @@ class _$CartStateErrorImpl implements CartStateError {
   @pragma('vm:prefer-inline')
   _$$CartStateErrorImplCopyWith<_$CartStateErrorImpl> get copyWith =>
       __$$CartStateErrorImplCopyWithImpl<_$CartStateErrorImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   @optionalTypeArgs
