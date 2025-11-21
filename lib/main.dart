@@ -7,6 +7,7 @@ import 'presentation/router.dart';
 import 'presentation/widgets/biometric_auth_wrapper.dart';
 import 'data/models/cart_item_model.dart';
 import 'data/models/order_model.dart';
+import 'core/theme/app_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,16 +35,7 @@ class ShopFlutterApp extends ConsumerWidget {
       child: MaterialApp.router(
         title: 'ShopFlutter',
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-          useMaterial3: true,
-          elevatedButtonTheme: ElevatedButtonThemeData(
-            style: ElevatedButton.styleFrom(
-              foregroundColor: Colors.white,
-              backgroundColor: Colors.blue,
-            ),
-          ),
-        ),
+        theme: AppTheme.lightTheme,
         routerConfig: router,
       ),
     );

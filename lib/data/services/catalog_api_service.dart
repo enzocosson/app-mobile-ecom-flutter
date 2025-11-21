@@ -12,7 +12,7 @@ class CatalogApiService {
   final bool useLocalData;
 
   CatalogApiService({http.Client? client, this.useLocalData = true})
-    : _client = client ?? http.Client();
+      : _client = client ?? http.Client();
 
   /// Récupère tous les produits
   Future<List<ProductDto>> fetchProducts() async {

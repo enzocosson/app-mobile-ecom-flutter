@@ -168,9 +168,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       ? null
                       : () {
                           if (_formKey.currentState!.validate()) {
-                            ref
-                                .read(authViewModelProvider.notifier)
-                                .signUp(
+                            ref.read(authViewModelProvider.notifier).signUp(
                                   _nameController.text.trim(),
                                   _emailController.text.trim(),
                                   _passwordController.text,

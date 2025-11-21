@@ -52,9 +52,8 @@ class OrderModel extends HiveObject {
     return OrderModel(
       id: order.id,
       userId: order.userId,
-      items: order.items
-          .map((item) => CartItemData.fromCartItem(item))
-          .toList(),
+      items:
+          order.items.map((item) => CartItemData.fromCartItem(item)).toList(),
       total: order.total,
       createdAt: order.createdAt,
       status: order.status.index,

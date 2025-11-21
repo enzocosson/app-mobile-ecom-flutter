@@ -12,9 +12,9 @@ class AuthRepositoryImpl implements AuthRepository {
   AuthRepositoryImpl({
     firebase.FirebaseAuth? firebaseAuth,
     GoogleSignIn? googleSignIn,
-  }) : _firebaseAuth = firebaseAuth ?? firebase.FirebaseAuth.instance,
-       // Désactiver Google Sign-In sur Web pour éviter l'erreur de Client ID
-       _googleSignIn = kIsWeb ? null : (googleSignIn ?? GoogleSignIn());
+  })  : _firebaseAuth = firebaseAuth ?? firebase.FirebaseAuth.instance,
+        // Désactiver Google Sign-In sur Web pour éviter l'erreur de Client ID
+        _googleSignIn = kIsWeb ? null : (googleSignIn ?? GoogleSignIn());
 
   @override
   Stream<UserProfile?> get authStateChanges {

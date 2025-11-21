@@ -96,9 +96,8 @@ class ProductImage extends StatelessWidget {
             child: Icon(
               icon,
               size: (width ?? height ?? 50) * 0.5,
-              color: color == Colors.white
-                  ? Colors.grey.shade800
-                  : Colors.white,
+              color:
+                  color == Colors.white ? Colors.grey.shade800 : Colors.white,
             ),
           );
         },
@@ -142,7 +141,7 @@ class ProductImage extends StatelessWidget {
             child: CircularProgressIndicator(
               value: loadingProgress.expectedTotalBytes != null
                   ? loadingProgress.cumulativeBytesLoaded /
-                        loadingProgress.expectedTotalBytes!
+                      loadingProgress.expectedTotalBytes!
                   : null,
             ),
           ),

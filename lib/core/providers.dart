@@ -120,8 +120,8 @@ final authViewModelProvider = StateNotifierProvider<AuthViewModel, AuthState>((
 
 final catalogViewModelProvider =
     StateNotifierProvider<CatalogViewModel, CatalogState>((ref) {
-      return CatalogViewModel(ref);
-    });
+  return CatalogViewModel(ref);
+});
 
 final cartViewModelProvider = StateNotifierProvider<CartViewModel, CartState>((
   ref,

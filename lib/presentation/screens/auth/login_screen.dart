@@ -56,8 +56,8 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   Text(
                     'ShopFlutter',
                     style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
+                          fontWeight: FontWeight.bold,
+                        ),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 48),
@@ -124,9 +124,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                         ? null
                         : () {
                             if (_formKey.currentState!.validate()) {
-                              ref
-                                  .read(authViewModelProvider.notifier)
-                                  .signIn(
+                              ref.read(authViewModelProvider.notifier).signIn(
                                     _emailController.text.trim(),
                                     _passwordController.text,
                                   );

@@ -58,8 +58,8 @@ class CatalogViewModel extends StateNotifier<CatalogState> {
 /// Provider pour CatalogViewModel
 final catalogViewModelProvider =
     StateNotifierProvider<CatalogViewModel, CatalogState>((ref) {
-      return CatalogViewModel(ref);
-    });
+  return CatalogViewModel(ref);
+});
 
 /// États possibles pour le catalogue
 @freezed
