@@ -1,5 +1,7 @@
 {
   "name": "app-ecommerce",
   "version": "1.0.0",
-  "scripts": {}
+  "scripts": {
+    "build": "echo 'Build must be done locally with flutter build web' && exit 1"
+  }
 }
